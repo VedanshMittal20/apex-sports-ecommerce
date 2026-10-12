@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX ATHLETIC | High-Performance Sports & Hardware Ecosystem</title>
+  <meta name="description" content="Commercial-grade sports e-commerce ecosystem. Industrial 11-gauge strength hardware, graduated compression apparel, and carbon marathon propulsion. Engineered for elite athletic departments and commercial facilities.">
+  <meta name="theme-color" content="#131b2e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. TOP NOTIFICATION & B2B / STRATEGY UTILITY BAR
+       ========================================================================== -->
+  <div class="top-utility-bar" id="topUtilityBar">
+    <div class="top-utility-inner">
+      <div class="top-utility-left">
+        <div class="bopis-indicator" id="bopisStatusBtn" onclick="scrollToSection('bopis-section')" title="Omnichannel Hub Status">
+          <span class="dot"></span>
+          <span id="bopisStatusText">HUB: AUSTIN CENTRAL FLAGSHIP [4.2 MI • 47-MIN READY]</span>
+        </div>
+        <div class="weather-indicator">
+          <span>ENV: 78°F AUSTIN • HYPERVENT AERATION PROTOCOL</span>
+        </div>
+      </div>
+      <div class="top-utility-right">
+        <!-- B2B / B2C Master Switcher -->
+        <div class="mode-toggle-group" title="Toggle Retail vs Institutional Commercial Mode">
+          <button class="mode-btn active" id="modeB2C" onclick="switchCommerceMode('b2c')">Retail Athlete</button>
+          <button class="mode-btn" id="modeB2B" onclick="switchCommerceMode('b2b')">Institutional B2B</button>
+        </div>
+        <!-- Strategic Blueprint Companion Trigger -->
+        <button class="companion-trigger-btn" id="openStrategyDrawerBtn" onclick="toggleStrategyDrawer(true)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Market Blueprint & Research</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. PRIMARY STICKY HEADER & MEGA-MENU
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="brand-logo-wrap" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <div class="brand-symbol">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 22 20 2 20 12 2"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">APEX ATHLETIC</span>
+          <span class="brand-sub" id="brandSubTag">HUMAN OUTPUT SYSTEMS // B2C</span>
+        </div>
+      </div>
+
+      <!-- Mega-Menu Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <!-- Hardware -->
+        <div class="nav-item">
+          <a href="#hardware" class="nav-link">
+            <span>Hardware</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="mega-menu-panel">
+            <div class="mega-col">
+              <h4>Strength & Conditioning</h4>
+              <ul class="mega-menu-list">
+                <li><a href="javascript:void(0)" onclick="openPdpModal('cable-tower')"><span>CT-1X2 Cable Tower</span> <span class="mega-badge">Anchor Tier</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('cable-tower')"><span>Matrix Power Cell 3x3</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('cable-tower')"><span>ISO-Lateral Leg Press</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('cable-tower')"><span>Hyper-Extension GHD</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>Free Weights & Bars</h4>
+              <ul class="mega-menu-list">
+                <li><a href="javascript:void(0)" onclick="scrollToSection('bundle-builder')"><span>Cerakote Barbell 20kg</span></a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('bundle-builder')"><span>Urethane Bumper Sets</span> <span class="mega-badge">Mil-Spec</span></a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('bundle-builder')"><span>Machined Steel Stacks</span></a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('bundle-builder')"><span>Competition Kettlebells</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>Clearance & Spatial</h4>
+              <ul class="mega-menu-list">
+                <li><a href="javascript:void(0)" onclick="openPdpModal('cable-tower', 'room-planner')"><span>10x10ft Floor Planner</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('cable-tower', 'exploded-view')"><span>3D CAD Assembly</span></a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('bopis-section')"><span>BOPIS Pickup (47 Min)</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-promo-card">
+              <div>
+                <span class="badge-pill gold">ASTM F2276 COMPLIANT</span>
+                <h5 style="margin-top:8px;">11-Gauge Structural Tubing</h5>
+                <p>Commercial grade laser-cut steel rated to 3,500 lbs static yield with lifetime frame warranty.</p>
+              </div>
+              <button class="btn-secondary" style="padding:7px 12px; font-size:0.72rem; border-color:#ffffff; color:#ffffff;" onclick="openPdpModal('cable-tower')">Inspect Blueprint</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Apparel -->
+        <div class="nav-item">
+          <a href="#apparel" class="nav-link">
+            <span>Compression</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="mega-menu-panel">
+            <div class="mega-col">
+              <h4>Venous Gradient Apparel</h4>
+              <ul class="mega-menu-list">
+                <li><a href="javascript:void(0)" onclick="openPdpModal('compression-suit')"><span>AeroVent Pro (20-25 mmHg)</span> <span class="mega-badge">Thermal Tech</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('compression-suit')"><span>Vascular Recovery Tights</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('compression-suit')"><span>Targeted Oscillation Sleeves</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>Fit Intelligence</h4>
+              <ul class="mega-menu-list">
+                <li><a href="javascript:void(0)" onclick="openAiSizingModal()"><span>BoldMetrics 3D Predictor</span> <span class="mega-badge">96% Match</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('compression-suit', 'thermal-view')"><span>Thermal MVTR Heatmap</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('compression-suit')"><span>Zero-Bracket Protocol</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>Procurement</h4>
+              <ul class="mega-menu-list">
+                <li><a href="#catalog" onclick="filterCatalog('apparel')"><span>Men's Elite Series</span></a></li>
+                <li><a href="#catalog" onclick="filterCatalog('apparel')"><span>Women's Pro Series</span></a></li>
+                <li><a href="#b2b-portal" onclick="scrollToSection('b2b-portal')"><span>Team Uniform Bundles</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-promo-card">
+              <div>
+                <span class="badge-pill gold">OEKO-TEX CERTIFIED</span>
+                <h5 style="margin-top:8px;">Zero Bracket Buying</h5>
+                <p>Multi-vector anthropometric sizing suppresses return rates from 38% to under 3%.</p>
+              </div>
+              <button class="btn-primary" style="padding:7px 12px; font-size:0.72rem;" onclick="openAiSizingModal()">Launch Fit Advisor</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biomechanical Footwear -->
+        <div class="nav-item">
+          <a href="#footwear" class="nav-link">
+            <span>Footwear</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="mega-menu-panel">
+            <div class="mega-col">
+              <h4>Carbon Marathon Racers</h4>
+              <ul class="mega-menu-list">
+                <li><a href="javascript:void(0)" onclick="openPdpModal('carbon-shoe')"><span>Strata Pro Carbon Racer</span> <span class="mega-badge">360° Orbit</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('carbon-shoe')"><span>PEBA Supercritical Foam</span></a></li>
+                <li><a href="javascript:void(0)" onclick="openPdpModal('carbon-shoe')"><span>8.0mm Drop Geometry</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>Biomechanical Profiling</h4>
+              <ul class="mega-menu-list">
+                <li><a href="#catalog" onclick="filterCatalog('neutral')"><span>Neutral Axis</span></a></li>
+                <li><a href="#catalog" onclick="filterCatalog('stability')"><span>Guidance Chassis</span></a></li>
+                <li><a href="#catalog" onclick="filterCatalog('trail')"><span>Technical Ultra-Terrain</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>Performance Exclusives</h4>
+              <ul class="mega-menu-list">
+                <li><a href="#strava-section" onclick="scrollToSection('strava-section')"><span>Strava 42.2K Unlock Drop</span></a></li>
+                <li><a href="#strava-section" onclick="scrollToSection('strava-section')"><span>Sub-3 Marathon Special</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-promo-card">
+              <div>
+                <span class="badge-pill ice">87% ENERGY RETURN</span>
+                <h5 style="margin-top:8px;">FlyPlate Composite</h5>
+                <p>Dual-fork carbon chassis calibrated for mechanical propulsion in compliance with World Athletics regulations.</p>
+              </div>
+              <button class="btn-secondary" style="padding:7px 12px; font-size:0.72rem; border-color:#ffffff; color:#ffffff;" onclick="openPdpModal('carbon-shoe')">360° View</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="#bundle-builder" class="nav-link" onclick="scrollToSection('bundle-builder')">Bundle Builder</a></div>
+        <div class="nav-item"><a href="#b2b-portal" class="nav-link" onclick="scrollToSection('b2b-portal')">B2B Wholesale</a></div>
+        <div class="nav-item"><a href="#regen-section" class="nav-link" onclick="scrollToSection('regen-section')">Re-Gen Trade-In</a></div>
+      </nav>
+
+      <!-- Header Search & Actions -->
+      <div class="header-actions">
+        <div class="search-bar-wrap">
+          <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="search-input" id="semanticSearchInput" placeholder="Search (11-gauge, mmHg, PEBA)..." oninput="handleInstantSearch(this.value)">
+        </div>
+        <button class="action-icon-btn" title="Sync Strava / Activity Metrics" onclick="scrollToSection('strava-section')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+        </button>
+        <button class="action-icon-btn" id="openCartBtn" onclick="toggleCartDrawer(true)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-count-badge" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       3. HERO SHOWCASE & PRIMACY BIAS ANCHORING
+       ========================================================================== -->
+  <section class="hero-section">
+    <img src="assets/hero.jpg" alt="Apex Athletic Training Facility" class="hero-background-img">
+    <div class="hero-gradient-overlay"></div>
+    <div class="hero-content-wrap">
+      <div class="hero-copy">
+        <div class="hero-pre-badge">
+          <span class="mono-tag">TECHNICAL COMMERCE ARCHITECTURE 2026</span>
+          <span style="color:rgba(255,255,255,0.4)">/</span>
+          <span style="font-size:0.72rem; color:#cbd5e1; font-family:var(--font-mono);">SUB-10MS LATENCY</span>
+        </div>
+        <h1 class="hero-title">ENGINEERED FOR THE LIMITS OF <span class="accent">HUMAN OUTPUT</span></h1>
+        <p class="hero-desc">
+          Bridging the tactility and institutional procurement gap. Uniting ASTM F2276 structural 11-gauge hardware with 20–25 mmHg graduated biometric apparel and carbon marathon propulsion.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn-primary" onclick="openPdpModal('cable-tower')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+            <span>Configure Cable Cell ($2,850)</span>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('bundle-builder')">
+            <span>Dynamic Bundle Builder (-25%)</span>
+          </button>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; font-size:0.72rem; color:#94a3b8; font-family:var(--font-mono);">
+          <span>CORE WEB VITALS: LCP &lt; 1.2S</span>
+          <span>/</span>
+          <span>LIFETIME STRUCTURAL WARRANTY</span>
+          <span>/</span>
+          <span>47-MIN BOPIS SLA</span>
+        </div>
+      </div>
+
+      <!-- Strategic Price Anchor Card -->
+      <div class="hero-anchor-card">
+        <div class="anchor-header">
+          <div>
+            <span class="anchor-tag">PRICE ANCHOR // HARDWARE SPEC</span>
+            <h3 style="font-size:1.15rem; color:var(--primary); margin-top:4px;">Apex CT-1X2 Industrial Cable Cell</h3>
+          </div>
+          <span class="badge-pill dark">IN STOCK: AUSTIN</span>
+        </div>
+        <div class="anchor-img-wrap" onclick="openPdpModal('cable-tower')">
+          <img src="assets/cable_tower.jpg" alt="Apex CT-1X2 Cable Tower">
+        </div>
+        <div class="anchor-specs-strip">
+          <div class="anchor-spec-box">
+            <span class="val">3x3"</span>
+            <span class="lbl">11-Ga Steel</span>
+          </div>
+          <div class="anchor-spec-box">
+            <span class="val">2x 250lb</span>
+            <span class="lbl">Machined Stacks</span>
+          </div>
+          <div class="anchor-spec-box">
+            <span class="val">10x10'</span>
+            <span class="lbl">Clearance</span>
+          </div>
+        </div>
+        <div class="anchor-price-row">
+          <div class="anchor-price" id="heroAnchorPriceDisplay">$2,850.00</div>
+          <div class="anchor-bnpl">Or <span id="heroAnchorBnplDisplay">$89/mo</span> with Affirm (0% APR)</div>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+          <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary); padding:9px; font-size:0.75rem;" onclick="openPdpModal('cable-tower', 'room-planner')">
+            10x10' Planner
+          </button>
+          <button class="btn-primary" style="padding:9px; font-size:0.75rem;" onclick="quickAddToCart('cable-tower')">
+            + Quick Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. TRUST & TECHNICAL PERFORMANCE BENCHMARKS STRIP
+       ========================================================================== -->
+  <section class="trust-strip">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h4>ASTM F2276 & ISO 20957 Class S</h4>
+          <p>Industrial structural steel tested to 3,500lb yield limit with lifetime warranty.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div>
+          <h4>Graduated Biometrics</h4>
+          <p>20–25 mmHg millimetric compression accelerates venous return and dampens DOMS.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h4>47-Minute BOPIS SLA</h4>
+          <p>Algorithmic store allocation within 3 mins; staged for pickup within 47 mins.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div>
+          <h4>AI Zero-Bracket Sizing</h4>
+          <p>BoldMetrics AI engine reduces fit-related returns by 30% saving $21.40/order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. CATALOG MATRIX & INTERACTIVE FACETED FILTERING
+       ========================================================================== -->
+  <section class="section-wrap" id="catalog">
+    <div class="section-header-row">
+      <div>
+        <div class="section-eyebrow">ENGINEERED PERFORMANCE CATALOG</div>
+        <h2 class="section-title">PRECISION GEAR MATRIX</h2>
+      </div>
+      <div class="filter-tabs-row" id="filterTabsContainer">
+        <button class="filter-tab active" onclick="filterCatalog('all', this)">All Deployments</button>
+        <button class="filter-tab" onclick="filterCatalog('hardware', this)">Heavy Hardware (11-Ga)</button>
+        <button class="filter-tab" onclick="filterCatalog('apparel', this)">Compression (20-25 mmHg)</button>
+        <button class="filter-tab" onclick="filterCatalog('footwear', this)">Carbon Racers (8mm Drop)</button>
+        <button class="filter-tab" onclick="filterCatalog('recovery', this)">Active Recovery</button>
+      </div>
+    </div>
+
+    <!-- Product Cards Grid -->
+    <div class="product-grid" id="productGridContainer">
+      <!-- Injected via JavaScript with dynamic B2B / B2C pricing and modal triggers -->
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. DYNAMIC GAMIFIED BUNDLE BUILDER SECTION
+       ========================================================================== -->
+  <section class="bundle-builder-wrap" id="bundle-builder">
+    <div class="builder-header">
+      <div class="section-eyebrow">SINGLE-STEP BUNDLE ARCHITECTURE</div>
+      <h2 class="section-title" style="margin-bottom:8px;">BUILD YOUR HIGH-OUTPUT RIG & KIT</h2>
+      <p>Gamified tiered rewards. Add equipment to cross spending thresholds and unlock escalating discount tiers and complimentary accessories.</p>
+    </div>
+
+    <!-- Live Dynamic Progress Bar -->
+    <div class="builder-progress-container">
+      <div class="progress-tier-labels">
+        <div class="tier-marker" id="tierMarker1">
+          <span class="lbl">$150 [10% OFF]</span>
+          <span class="tier-gift">PRO SHAKER BOTTLE</span>
+        </div>
+        <div class="tier-marker" id="tierMarker2">
+          <span class="lbl">$350 [15% OFF]</span>
+          <span class="tier-gift">VELOCITY LIFTING STRAPS</span>
+        </div>
+        <div class="tier-marker" id="tierMarker3">
+          <span class="lbl">$600 [20% OFF]</span>
+          <span class="tier-gift">TACTICAL GYM DUFFEL</span>
+        </div>
+        <div class="tier-marker" id="tierMarker4">
+          <span class="lbl">$1,000 [25% OFF]</span>
+          <span class="tier-gift">WHITE GLOVE FREIGHT</span>
+        </div>
+      </div>
+      <div class="bundle-progress-bar-bg">
+        <div class="bundle-progress-bar-fill" id="bundleProgressBarFill"></div>
+      </div>
+    </div>
+
+    <!-- Bundle Items Checklist Grid -->
+    <div class="builder-grid" id="bundleItemsGrid">
+      <!-- Items populated dynamically via app.js -->
+    </div>
+
+    <!-- Live Summary Strip -->
+    <div class="builder-summary-strip">
+      <div class="summary-details">
+        <div class="summary-stat-box">
+          <span class="lbl">Configured Package Total</span>
+          <span class="val" id="bundleConfiguredTotal">$0.00</span>
+        </div>
+        <div class="summary-stat-box">
+          <span class="lbl">Unlocked Reward Discount</span>
+          <span class="savings" id="bundleDiscountSummary">0% Discount ($0.00 Saved)</span>
+        </div>
+        <div class="summary-stat-box">
+          <span class="lbl">Complimentary Upgrades</span>
+          <span class="val" id="bundleGiftsSummary" style="font-size:0.95rem; color:var(--secondary-container);">Select gear to unlock rewards</span>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="addBundleToCart()">
+        <span>Deploy Complete Bundle</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. B2B WHOLESALE & PROCUREMENT PORTAL SECTION
+       ========================================================================== -->
+  <section class="b2b-portal-section" id="b2b-portal">
+    <div class="b2b-grid">
+      <div>
+        <div class="section-eyebrow">ENTERPRISE COMMERCE CONVERGENCE</div>
+        <h2 class="section-title">INSTITUTIONAL & TEAM PROCUREMENT</h2>
+        <p style="margin: 14px 0 20px 0; line-height:1.6; font-size:0.88rem;">
+          Eliminating the operational barrier between individual retail and commercial bulk ordering. Supports automated cXML & OCI PunchOut catalogs (SAP Ariba, Coupa, Workday), EDI 850/810 workflows, Berry Amendment 10 U.S.C. 2533a compliance, and volume pricing brackets for collegiate athletics and defense training centers.
+        </p>
+        
+        <table class="b2b-tier-table">
+          <thead>
+            <tr>
+              <th>Volume Bracket</th>
+              <th>Unit Pricing</th>
+              <th>Margin Discount</th>
+              <th>Fulfillment SLA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 – 9 Units</td>
+              <td>$145.00 / ea</td>
+              <td>Standard Retail</td>
+              <td>Same-Day Dispatch</td>
+            </tr>
+            <tr style="background: rgba(253, 147, 61, 0.08);">
+              <td>10 – 49 Units</td>
+              <td class="highlight">$116.00 / ea</td>
+              <td class="highlight">20% Tier Savings</td>
+              <td>Direct Freight Staging</td>
+            </tr>
+            <tr style="background: rgba(253, 147, 61, 0.16);">
+              <td>50+ Commercial Units</td>
+              <td class="highlight">$94.25 / ea</td>
+              <td class="highlight">35% Wholesale Margin</td>
+              <td>Dedicated Account Exec</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="display:flex; gap:12px; margin-top:18px;">
+          <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary);" onclick="generateMockQuotePDF()">
+            Generate Formal RFQ Quote
+          </button>
+          <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary);" onclick="openTaxExemptUploadModal()">
+            Tax-Exempt Status Portal
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive B2B Bulk Calculator Card -->
+      <div class="b2b-card-tool">
+        <span class="mono-tag" style="color:var(--secondary);">LIVE VOLUME BRACKET CALCULATOR</span>
+        <h3 style="font-size:1.3rem; margin:6px 0 12px 0; color:var(--primary);">AeroVent Pro Team Outfitting</h3>
+        
+        <div class="calc-select-row">
+          <label>Target Organization Profile</label>
+          <select class="calc-select" id="b2bOrgType">
+            <option value="collegiate">NCAA Division 1 / Collegiate Athletic Dept</option>
+            <option value="gym">Boutique Commercial Strength Box</option>
+            <option value="corporate">Corporate Wellness Facility</option>
+            <option value="tactical">DoD Tactical & First Responder Unit</option>
+          </select>
+        </div>
+
+        <div class="quantity-stepper-wrap">
+          <div style="flex-grow:1;">
+            <label style="font-size:0.7rem; font-family:var(--font-mono); color:var(--slate-muted); text-transform:uppercase; font-weight:700;">Select Procurement Quantity</label>
+            <input type="range" min="1" max="150" value="25" class="qty-slider" id="b2bQuantitySlider" oninput="calculateB2BQuote(this.value)">
+          </div>
+          <div class="qty-display-badge" id="b2bQtyDisplay">25 Units</div>
+        </div>
+
+        <div style="background:var(--surface-container-low); border:1px solid var(--border-card); border-radius:var(--rounded-default); padding:14px; margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:0.8rem;">
+            <span style="color:var(--on-surface-variant);">Calculated Unit Price:</span>
+            <span style="color:var(--primary); font-weight:800; font-family:var(--font-mono);" id="b2bUnitPriceDisplay">$116.00 / ea</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:0.8rem;">
+            <span style="color:var(--on-surface-variant);">Total Tier Savings:</span>
+            <span style="color:var(--secondary); font-weight:800; font-family:var(--font-mono);" id="b2bSavingsDisplay">-$725.00 [20% OFF]</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:900; border-top:1px solid var(--border-card); padding-top:8px; font-family:var(--font-headline);">
+            <span>Wholesale Purchase Order:</span>
+            <span style="color:var(--secondary);" id="b2bTotalPriceDisplay">$2,900.00</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" style="width:100%; justify-content:center;" onclick="addB2BOrderToCart()">
+          Deploy Institutional Purchase Order
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. ATHLETIC LOYALTY & STRAVA / ACTIVITY INTEGRATION
+       ========================================================================== -->
+  <section class="strava-loyalty-section" id="strava-section">
+    <div class="strava-grid">
+      <div class="strava-device-card">
+        <span class="strava-badge">
+          ACTIVITY METRICS SYNC [STRAVA & APPLE HEALTH]
+        </span>
+        <h3 style="font-size:1.35rem; color:#ffffff; margin-bottom:6px;">Apex Athlete Performance Club</h3>
+        <p style="font-size:0.82rem; margin-bottom:14px; color:#cbd5e1;">
+          Rewarding physical output, not just financial transactions. Synchronize workout data to earn tier access for restricted scarcity apparel drops and exclusive member pricing.
+        </p>
+
+        <div class="activity-metric-tiles">
+          <div class="activity-tile">
+            <span class="num" id="stravaMileage">42.2 KM</span>
+            <span class="label">Marathon Verified</span>
+          </div>
+          <div class="activity-tile">
+            <span class="num" id="stravaDeadlift">495 LBS</span>
+            <span class="label">Deadlift Max PR</span>
+          </div>
+          <div class="activity-tile">
+            <span class="num" style="color:var(--secondary-container);" id="stravaTier">TIER 3</span>
+            <span class="label">Apex Elite Status</span>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:10px;">
+          <button class="btn-primary" style="flex:1; justify-content:center; font-size:0.75rem; padding:10px;" id="stravaConnectBtn" onclick="simulateStravaSync()">
+            Sync Workout Telemetry
+          </button>
+          <button class="btn-secondary" style="font-size:0.75rem; padding:10px;" onclick="claimStravaDrop()">
+            Claim Scarcity Release
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <span class="badge-pill gold" style="margin-bottom:10px; display:inline-block;">JUST DROPPED EXCLUSIVE</span>
+        <h2 style="font-size:1.8rem; text-transform:uppercase; color:#ffffff; margin-bottom:12px;">APEX SHADOW CARBON RACER [SUB-3 SPECIAL EDITION]</h2>
+        <p style="margin-bottom:18px; line-height:1.6; font-size:0.88rem; color:#cbd5e1;">
+          Reserved exclusively for athletes logging verified sub-3:30 marathon times or &gt;100km monthly volume. Features a dual-fork carbon matrix and sub-180g dry weight.
+        </p>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div style="font-size:1.8rem; font-weight:700; color:#ffffff; font-family:var(--font-headline);">$265.00</div>
+          <span class="badge-pill dark" id="dropStatusBadge" style="background:rgba(255,255,255,0.1); color:#ffffff; border:1px solid rgba(255,255,255,0.2);">[LOCKED: REQUIRES ACTIVITY SYNC]</span>
+        </div>
+        <button class="btn-primary" id="unlockDropCta" onclick="openPdpModal('carbon-shoe')">
+          Explore Biomechanical Blueprint
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. CIRCULAR ECONOMY & APEX RE-GEN
+       ========================================================================== -->
+  <section class="regen-section" id="regen-section">
+    <div class="regen-box">
+      <div>
+        <div class="section-eyebrow">CIRCULAR LIFECYCLE & MATERIAL RECIRCULATION</div>
+        <h2 class="section-title">APEX RE-GEN TRADE-IN</h2>
+        <p style="margin: 14px 0 18px 0; line-height:1.6; font-size:0.88rem;">
+          Inspired by Patagonia’s Worn Wear model. Return gently trained hardware, barbells, or compression garments to maintain a zero-landfill lifecycle and receive instant store credit with prepaid shipping logistics.
+        </p>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:0.82rem; color:var(--on-surface-variant);">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="color:var(--secondary); font-weight:800;">[OK]</span> 100% Guaranteed Steel & Polymer Recirculation
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="color:var(--secondary); font-weight:800;">[OK]</span> Instant Digital Gift Card issued upon carrier scan
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="color:var(--secondary); font-weight:800;">[OK]</span> Up to $450 credit on Generation 1 Olympic Barbell & Squat Systems
+          </div>
+        </div>
+      </div>
+
+      <!-- Trade-In Calculator Tool -->
+      <div class="tradein-calc-card">
+        <span class="mono-tag" style="color:var(--secondary);">VALUATION ALGORITHM</span>
+        <h4 style="font-size:1.15rem; color:var(--primary); margin:4px 0 14px 0;">Estimate Gear Valuation</h4>
+
+        <div class="calc-select-row">
+          <label>Select Hardware or Apparel Item</label>
+          <select class="calc-select" id="regenItemSelect" onchange="calculateReGenQuote()">
+            <option value="450">Gen 1 Cable Tower / Squat Rig</option>
+            <option value="120">Cerakote Olympic Barbell 20kg</option>
+            <option value="90">Urethane Bumper Plates (Pair)</option>
+            <option value="45">AeroVent Compression Tops/Tights</option>
+          </select>
+        </div>
+
+        <div class="calc-select-row">
+          <label>Condition Grading</label>
+          <select class="calc-select" id="regenConditionSelect" onchange="calculateReGenQuote()">
+            <option value="1.0">Pristine / Lightly Trained [100% Value]</option>
+            <option value="0.8">Good / Minor Chalk Marks [80% Value]</option>
+            <option value="0.6">Battle-Tested Heavy Wear [60% Value]</option>
+          </select>
+        </div>
+
+        <div class="calc-valuation-display">
+          <span style="font-size:0.7rem; color:var(--slate-muted); text-transform:uppercase; font-family:var(--font-mono); font-weight:700;">Instant Trade-In Credit</span>
+          <div class="amt" id="regenValuationDisplay">$450.00</div>
+          <span style="font-size:0.72rem; color:var(--on-surface-variant); font-weight:500;">Prepaid Freight Shipping Label Included</span>
+        </div>
+
+        <button class="btn-primary" style="width:100%; justify-content:center;" onclick="claimReGenCredit()">
+          Claim Credit & Generate Return Waybill
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. OMNICHANNEL BOPIS & OMS ALGORITHM SECTION
+       ========================================================================== -->
+  <section class="section-wrap" id="bopis-section">
+    <div class="section-header-row">
+      <div>
+        <div class="section-eyebrow">OMNICHANNEL LOGISTICS & INVENTORY ROUTING</div>
+        <h2 class="section-title">THE 15-MILE RULE & 47-MIN BOPIS</h2>
+      </div>
+      <span class="badge-pill gold">ZERO FREIGHT FRICTION</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:22px;">
+      <!-- Store Locator Card -->
+      <div style="background:#ffffff; border:1px solid var(--border-card); border-radius:var(--rounded-default); padding:24px;">
+        <span class="mono-tag" style="color:var(--secondary);">LOCAL DISTRIBUTION HUBS</span>
+        <h3 style="font-size:1.2rem; color:var(--primary); margin:4px 0 12px 0;">Regional Fulfillment Nodes</h3>
+        
+        <div style="display:flex; flex-direction:column; gap:10px;" id="bopisStoreList">
+          <div class="builder-item-card selected" onclick="selectStoreHub('austin', this)">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <strong style="color:var(--primary); font-size:0.9rem; font-family:var(--font-headline);">Apex Austin Central Flagship</strong>
+                <p style="font-size:0.75rem; margin-top:2px;">4.2 Miles • 201 Colorado St, Austin, TX</p>
+              </div>
+              <span class="badge-pill gold">47-MIN READY</span>
+            </div>
+          </div>
+          <div class="builder-item-card" onclick="selectStoreHub('dallas', this)">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <strong style="color:var(--primary); font-size:0.9rem; font-family:var(--font-headline);">Apex Dallas Distribution Node</strong>
+                <p style="font-size:0.75rem; margin-top:2px;">194 Miles • 1400 Main St, Dallas, TX</p>
+              </div>
+              <span class="badge-pill dark">NEXT-DAY HUB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Algorithmic OMS Routing Visualizer -->
+      <div style="background:#ffffff; border:1px solid var(--border-card); border-radius:var(--rounded-default); padding:24px;">
+        <span class="mono-tag" style="color:var(--primary);">OMS ALGORITHMIC ROUTING ENGINE</span>
+        <h3 style="font-size:1.2rem; color:var(--primary); margin:4px 0 12px 0;">Minimize Shipments vs Distance</h3>
+        
+        <div style="display:flex; gap:8px; margin-bottom:14px;">
+          <button class="filter-tab active" id="omsShipmentsTab" onclick="switchOmsAlgorithm('shipments')">Minimize Shipments (Greedy)</button>
+          <button class="filter-tab" id="omsDistanceTab" onclick="switchOmsAlgorithm('distance')">Minimize Distance (Cluster)</button>
+        </div>
+
+        <div style="background:var(--surface-container-low); border:1px solid var(--border-card); border-radius:var(--rounded-default); padding:14px; font-size:0.8rem; line-height:1.5;" id="omsExplanationBox">
+          <strong style="color:var(--secondary);">Active Engine: Minimize Shipments Algorithm</strong>
+          <p style="margin-top:4px; color:var(--on-surface-variant);">
+            Consolidates 200lb hardware stacks and lightweight compression apparel from Austin Hub into a single dispatch. Eliminates $38.50 in split-package handling fees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. MODAL: HARDWARE PDP
+       ========================================================================== -->
+  <div class="modal-backdrop" id="hardwareModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+      <div class="modal-pdp-layout">
+        <div class="pdp-media-stage">
+          <div class="pdp-main-viewport">
+            <img src="assets/cable_tower.jpg" alt="Apex CT-1X2 Cable Tower" id="hardwareMainImg">
+          </div>
+          <!-- 10x10ft Room Clearance Canvas -->
+          <div class="room-planner-canvas-box">
+            <canvas id="roomPlannerCanvas"></canvas>
+            <div style="position:absolute; bottom:6px; left:10px; font-size:0.68rem; color:#94a3b8; font-family:var(--font-mono);">
+              SPATIAL BLUEPRINT: 84" BASE • 92" CEILING CLEARANCE • 10x10' BUFFER
+            </div>
+          </div>
+        </div>
+
+        <div class="pdp-content-stage">
+          <span class="mono-tag" style="color:var(--secondary);">ASTM F2276 COMMERCIAL GRADE</span>
+          <h2 style="font-size:1.85rem; color:var(--primary); margin:4px 0 8px 0;">APEX CT-1X2 INDUSTRIAL CABLE TOWER</h2>
+          
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+            <span class="card-price-main" style="font-size:2.2rem;" id="hardwareModalPrice">$2,850.00</span>
+            <span style="font-size:0.85rem; color:var(--secondary); font-weight:700;">$89/mo with Affirm</span>
+          </div>
+
+          <p style="font-size:0.88rem; line-height:1.55; margin-bottom:16px;">
+            Fabricated with 3x3-inch 11-gauge USA structural steel. Features dual 250lb precision machined steel stacks with a 2:1 pulley ratio, commercial aircraft cables rated to 2,500 lbs, and laser-cut Westside hole spacing.
+          </p>
+
+          <table class="b2b-tier-table" style="margin-bottom:16px;">
+            <tbody>
+              <tr>
+                <td><strong>Steel Gauge</strong></td>
+                <td>11-Gauge (3.0mm) Structural Tubing</td>
+              </tr>
+              <tr>
+                <td><strong>Footprint</strong></td>
+                <td>64" L x 48" W x 89" H (10x10' Buffer Req)</td>
+              </tr>
+              <tr>
+                <td><strong>Weight Stacks</strong></td>
+                <td>Dual 250 lb (500 lb Total) Solid Machined</td>
+              </tr>
+              <tr>
+                <td><strong>Structural Warranty</strong></td>
+                <td style="color:var(--secondary); font-weight:800;">Lifetime Frame Guarantee</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-bottom:20px;">
+            <label style="font-size:0.72rem; font-family:var(--font-mono); color:var(--slate-muted); text-transform:uppercase; display:block; margin-bottom:6px; font-weight:700;">Add Modular Attachments</label>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <label class="builder-item-card" style="padding:8px 12px; display:flex; align-items:center; justify-content:space-between;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <input type="checkbox" id="attachSpotter" checked onchange="updateHardwarePrice()">
+                  <span style="font-size:0.85rem; color:var(--primary); font-weight:600;">Heavy Duty Spotter Arms (Pair)</span>
+                </div>
+                <span style="font-family:var(--font-mono); color:var(--secondary); font-size:0.85rem; font-weight:700;">+$140.00</span>
+              </label>
+              <label class="builder-item-card" style="padding:8px 12px; display:flex; align-items:center; justify-content:space-between;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <input type="checkbox" id="attachDip" onchange="updateHardwarePrice()">
+                  <span style="font-size:0.85rem; color:var(--primary); font-weight:600;">Matte Ergonomic Dip Horn Attachment</span>
+                </div>
+                <span style="font-family:var(--font-mono); color:var(--secondary); font-size:0.85rem; font-weight:700;">+$120.00</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+            <button class="btn-primary" onclick="addHardwareToCart()">
+              Add Hardware to Cart
+            </button>
+            <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary);" onclick="openAssemblyGuide()">
+              3D Assembly CAD
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       12. MODAL: APPAREL PDP & THERMAL HEATMAP
+       ========================================================================== -->
+  <div class="modal-backdrop" id="apparelModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+      <div class="modal-pdp-layout">
+        <div class="pdp-media-stage">
+          <div class="pdp-main-viewport">
+            <img src="assets/compression.jpg" alt="Apex AeroVent Compression Suit" id="apparelMainImg">
+            <canvas class="thermal-canvas-layer" id="thermalCanvasLayer"></canvas>
+            <div class="thermal-legend-strip" id="thermalLegend" style="display:none;">
+              <span style="font-family:var(--font-mono); color:#38bdf8; font-weight:700;">-4.2°C Aeration</span>
+              <div class="thermal-gradient-bar"></div>
+              <span style="font-family:var(--font-mono); color:#ea580c; font-weight:700;">High Heat Vents</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary); flex:1; font-size:0.75rem; padding:8px;" id="toggleThermalBtn" onclick="toggleThermalHeatmap()">
+              Toggle Thermal MVTR Layer
+            </button>
+            <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary); font-size:0.75rem; padding:8px;" onclick="openAiSizingModal()">
+              AI Fit Advisor
+            </button>
+          </div>
+        </div>
+
+        <div class="pdp-content-stage">
+          <span class="mono-tag" style="color:var(--secondary);">GRADUATED 20-25 MMHG COMPRESSION</span>
+          <h2 style="font-size:1.85rem; color:var(--primary); margin:4px 0 8px 0;">APEX AEROVENT PRO COMPRESSION SUIT</h2>
+          
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+            <span class="card-price-main" style="font-size:2.2rem;" id="apparelModalPrice">$145.00</span>
+            <span class="b2b-tier-note" id="apparelB2BNote" style="display:none;">[B2B TIER: $116.00 AT 10+ UNITS]</span>
+          </div>
+
+          <p style="font-size:0.88rem; line-height:1.55; margin-bottom:14px;">
+            Engineered with 82% Polyamide 6.6 and 18% Roica high-tensile elastane. OEKO-TEX Standard 100 Class II certified. Features millimetric pressure profiles mapped along venous conduits to enhance venous return and dampen muscle oscillation.
+          </p>
+
+          <div class="ai-sizing-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.8rem; font-weight:800; color:var(--primary); font-family:var(--font-headline); letter-spacing:0.02em;">SELECT FIT SIZE</span>
+              <button style="font-size:0.72rem; color:var(--secondary); font-weight:700; text-decoration:underline;" onclick="openAiSizingModal()">
+                Run BoldMetrics Body AI
+              </button>
+            </div>
+            
+            <div style="display:flex; gap:6px; margin:10px 0;" id="apparelSizeSelector">
+              <button class="filter-tab" onclick="selectApparelSize('S', this)">S</button>
+              <button class="filter-tab" onclick="selectApparelSize('M', this)">M</button>
+              <button class="filter-tab active" onclick="selectApparelSize('L', this)">L</button>
+              <button class="filter-tab" onclick="selectApparelSize('XL', this)">XL</button>
+              <button class="filter-tab" onclick="selectApparelSize('2XL', this)">2XL</button>
+            </div>
+
+            <div class="ai-match-confidence-badge" id="aiConfidenceBadge">
+              <span>BoldMetrics AI: <strong>Size L Recommended (96% Match)</strong> • Return Risk &lt; 2.8%</span>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="addApparelToCart()">
+            Add Compression Suit to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       13. MODAL: FOOTWEAR PDP & 360° SPIN
+       ========================================================================== -->
+  <div class="modal-backdrop" id="footwearModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+      <div class="modal-pdp-layout">
+        <div class="pdp-media-stage">
+          <div class="pdp-main-viewport">
+            <img src="assets/carbon_shoe.jpg" alt="Apex Strata Pro Carbon Shoe" id="shoeSpinImg">
+          </div>
+          <div class="spin-controller-bar">
+            <span style="font-size:0.7rem; font-family:var(--font-mono); color:var(--slate-muted); font-weight:700;">360° ORBIT</span>
+            <input type="range" min="0" max="360" value="0" class="spin-slider" id="shoeSpinSlider" oninput="rotateShoe360(this.value)">
+            <span style="font-size:0.7rem; font-family:var(--font-mono); color:var(--secondary); font-weight:700;" id="shoeDegreeDisplay">0° Angle</span>
+          </div>
+        </div>
+
+        <div class="pdp-content-stage">
+          <span class="mono-tag" style="color:var(--primary);">BIOMECHANICAL MARATHON RACER</span>
+          <h2 style="font-size:1.85rem; color:var(--primary); margin:4px 0 8px 0;">APEX STRATA PRO CARBON</h2>
+          
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+            <span class="card-price-main" style="font-size:2.2rem;">$265.00</span>
+            <span class="badge-pill gold">WORLD ATHLETICS LEGAL</span>
+          </div>
+
+          <p style="font-size:0.88rem; line-height:1.55; margin-bottom:14px;">
+            Engineered with a full-length dual-fork carbon composite FlyPlate embedded in dual-density PEBA supercritical foam. Delivers 87% mechanical energy return with an 8mm drop profile.
+          </p>
+
+          <div class="anchor-specs-strip" style="margin-bottom:16px;">
+            <div class="anchor-spec-box">
+              <span class="val">8.0 mm</span>
+              <span class="lbl">Heel Drop</span>
+            </div>
+            <div class="anchor-spec-box">
+              <span class="val">182g</span>
+              <span class="lbl">Dry Weight</span>
+            </div>
+            <div class="anchor-spec-box">
+              <span class="val">Dual-Fork</span>
+              <span class="lbl">Carbon Plate</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <label style="font-size:0.72rem; font-family:var(--font-mono); color:var(--slate-muted); text-transform:uppercase; display:block; margin-bottom:6px; font-weight:700;">Select US Unisex Size</label>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;" id="shoeSizeSelector">
+              <button class="filter-tab" onclick="selectShoeSize('8.5', this)">8.5</button>
+              <button class="filter-tab" onclick="selectShoeSize('9.0', this)">9.0</button>
+              <button class="filter-tab" onclick="selectShoeSize('9.5', this)">9.5</button>
+              <button class="filter-tab active" onclick="selectShoeSize('10.0', this)">10.0</button>
+              <button class="filter-tab" onclick="selectShoeSize('10.5', this)">10.5</button>
+              <button class="filter-tab" onclick="selectShoeSize('11.0', this)">11.0</button>
+              <button class="filter-tab" onclick="selectShoeSize('12.0', this)">12.0</button>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="addShoeToCart()">
+            Add Strata Carbon to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       14. MODAL: AI SIZING & FIT ENGINE
+       ========================================================================== -->
+  <div class="modal-backdrop" id="aiSizingModal">
+    <div class="modal-container" style="max-width:620px;">
+      <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+      <div style="padding:28px;">
+        <span class="mono-tag" style="color:var(--secondary);">ANTHROPOMETRIC FIT ENGINE</span>
+        <h2 style="font-size:1.7rem; color:var(--primary); margin:4px 0 12px 0;">AI 3D BODY SCAN & SIZE ADVISOR</h2>
+        <p style="font-size:0.85rem; margin-bottom:18px;">
+          Eliminate bracket buying and reverse logistics overhead. Our multi-vector algorithm predicts exact volumetric sizing based on body morphology and brand references.
+        </p>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:14px;">
+          <div class="calc-select-row">
+            <label>Height (Inches / Feet)</label>
+            <select class="calc-select" id="aiInputHeight" onchange="runAiSizingCalculation()">
+              <option value="68">5'8" (173 cm)</option>
+              <option value="70">5'10" (178 cm)</option>
+              <option value="72" selected>6'0" (183 cm)</option>
+              <option value="74">6'2" (188 cm)</option>
+              <option value="76">6'4" (193 cm)</option>
+            </select>
+          </div>
+          <div class="calc-select-row">
+            <label>Weight (Lbs / Kg)</label>
+            <select class="calc-select" id="aiInputWeight" onchange="runAiSizingCalculation()">
+              <option value="155">155 lbs (70 kg)</option>
+              <option value="175">175 lbs (79 kg)</option>
+              <option value="190" selected>190 lbs (86 kg)</option>
+              <option value="215">215 lbs (97 kg)</option>
+              <option value="240">240 lbs (109 kg)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:18px;">
+          <div class="calc-select-row">
+            <label>Athletic Build Profile</label>
+            <select class="calc-select" id="aiInputBuild" onchange="runAiSizingCalculation()">
+              <option value="athletic" selected>Athletic V-Taper (Broad Chest)</option>
+              <option value="powerlifter">Powerlifter / Heavy Muscular</option>
+              <option value="runner">Lean Endurance Runner</option>
+            </select>
+          </div>
+          <div class="calc-select-row">
+            <label>Reference Brand & Sizing</label>
+            <select class="calc-select" id="aiInputBrand" onchange="runAiSizingCalculation()">
+              <option value="nike_m">Size M in Nike</option>
+              <option value="nike_l" selected>Size L in Nike</option>
+              <option value="lulu_l">Size L in Lululemon</option>
+              <option value="underarmour_l">Size L in Under Armour</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="background:var(--surface-container-low); border:2px solid var(--secondary-container); border-radius:var(--rounded-default); padding:20px; text-align:center; margin-bottom:18px;">
+          <span style="font-size:0.72rem; font-family:var(--font-mono); color:var(--slate-muted); text-transform:uppercase; font-weight:700;">Algorithmic Fit Assessment</span>
+          <div style="font-size:2.4rem; font-weight:700; color:var(--secondary); font-family:var(--font-headline);" id="aiRecommendedSizeDisplay">SIZE LARGE (L)</div>
+          <div style="font-size:0.85rem; color:var(--primary); font-weight:700; margin-top:4px;" id="aiConfidenceScoreText">96.4% Fit Confidence • &lt;2.1% Predicted Return Risk</div>
+          <p style="font-size:0.75rem; color:var(--on-surface-variant); margin-top:6px;">Waist 33-35" • Chest 41-43" • Optimal 22 mmHg Compression Applied</p>
+        </div>
+
+        <button class="btn-primary" style="width:100%; justify-content:center;" onclick="applyAiSizeToSelection()">
+          Apply Recommended Size & Lock In
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       15. SIDE DRAWER: RESEARCH & STRATEGIC BLUEPRINT HUB
+       ========================================================================== -->
+  <aside class="strategy-drawer" id="strategyDrawer">
+    <div class="strategy-drawer-header">
+      <div>
+        <span class="mono-tag" style="color:var(--secondary-container);">DATA ARCHITECTURE & INDUSTRY BENCHMARKS</span>
+        <h3 style="font-size:1.35rem; margin-top:4px; font-family:var(--font-headline);">Strategic Blueprint Hub</h3>
+      </div>
+      <button class="modal-close-btn" style="position:static; color:#ffffff; background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.2);" onclick="toggleStrategyDrawer(false)">&times;</button>
+    </div>
+
+    <!-- Section 1: Market Sizing -->
+    <div class="strategy-callout-card">
+      <h4>1. Global Market Size & Growth Forecasts</h4>
+      <p>
+        The sporting goods and fitness equipment market reached $437.7 Billion in 2026 and is projected to surpass $715 Billion by 2032 (CAGR 6.9%–7.7%). Sporting goods eCommerce alone represents $74.6 Billion and will expand to $189.3 Billion by 2034 at a 10.9% CAGR.
+      </p>
+    </div>
+
+    <!-- Section 2: CVR & Retention Benchmarks -->
+    <div class="strategy-callout-card">
+      <h4>2. Conversion & Retention Benchmarks</h4>
+      <table class="benchmark-data-table">
+        <thead>
+          <tr>
+            <th>Vertical / Metric</th>
+            <th>Industry Avg</th>
+            <th>Top 10% Performers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sports & Recreation CVR</td>
+            <td>1.95%</td>
+            <td style="color:var(--secondary-container); font-weight:800;">5.0%+</td>
+          </tr>
+          <tr>
+            <td>Apparel & Footwear CVR</td>
+            <td>3.06%</td>
+            <td style="color:var(--secondary-container); font-weight:800;">&gt;5.5%</td>
+          </tr>
+          <tr>
+            <td>Repeat Purchase Rate</td>
+            <td>33.0%</td>
+            <td style="color:var(--secondary-container); font-weight:800;">62.0%+</td>
+          </tr>
+          <tr>
+            <td>Avg Customer Lifetime Value (CLV)</td>
+            <td>$218.00</td>
+            <td style="color:var(--secondary-container); font-weight:800;">$540.00+</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.75rem; color:#94a3b8;">
+        A 5% boost in repeat customer retention lifts bottom-line profits by 25% to 95%.
+      </p>
+    </div>
+
+    <!-- Section 3: Sizing AI ROI -->
+    <div class="strategy-callout-card">
+      <h4>3. Sizing AI & Margin Preservation</h4>
+      <p>
+        Apparel return rates range from 25% to 40%, with sizing accounting for 52% of all returns and costing the industry $45 Billion annually. Implementing BoldMetrics and TrueFit AI reduces fit returns by 30%, saving $15–$33 per returned item in reverse logistics overhead.
+      </p>
+    </div>
+
+    <!-- Section 4: Technology TCO -->
+    <div class="strategy-callout-card">
+      <h4>4. Technology TCO: Bounded Composability</h4>
+      <p>
+        Pure headless implementations incur $80K to $1.2M+ in TCO and cause application ecosystem fragmentation. Apex utilizes a bounded composability architecture, capturing 95% of headless speed while preserving native checkout scalability and eliminating $1.8M in middleware maintenance.
+      </p>
+    </div>
+
+    <!-- Section 5: Standards & Compliance -->
+    <div class="strategy-callout-card">
+      <h4>5. Industrial Compliance & Defense Procurement</h4>
+      <p>
+        Hardware conforms strictly to ASTM F2276 and ISO 20957 Class S commercial standards. Apparel adheres to OEKO-TEX Standard 100 Class II. Full support for Berry Amendment 10 U.S.C. 2533a compliance, cXML/OCI PunchOut catalogs, and EDI 850/810 integration.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       16. CART & ACCELERATED CHECKOUT DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div>
+        <h3 style="font-size:1.35rem; color:var(--primary); font-family:var(--font-headline);">DEPLOYMENT CART</h3>
+        <span class="mono-tag" style="color:var(--slate-muted);" id="cartItemCountText">0 Items Selected</span>
+      </div>
+      <button class="modal-close-btn" style="position:static;" onclick="toggleCartDrawer(false)">&times;</button>
+    </div>
+
+    <div class="inventory-hold-timer">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Inventory Reserved: <strong id="holdTimerDisplay">09:59</strong></span>
+    </div>
+
+    <div class="cart-items-scroll" id="cartItemsContainer">
+      <div style="text-align:center; padding:36px 20px; color:var(--slate-muted);">
+        <p>No gear configured yet.</p>
+        <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary); margin-top:12px; font-size:0.75rem;" onclick="toggleCartDrawer(false)">Explore Matrix</button>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Order Subtotal:</span>
+        <span id="cartSubtotalDisplay">$0.00</span>
+      </div>
+      
+      <div style="font-size:0.75rem; color:var(--on-surface-variant); margin-bottom:12px; display:flex; justify-content:space-between;">
+        <span>Omnichannel Fulfillment:</span>
+        <span style="color:var(--secondary); font-weight:700;">FREE BOPIS (Austin Flagship)</span>
+      </div>
+
+      <div class="wallet-pay-btns">
+        <button class="btn-wallet" onclick="executeAcceleratedCheckout('Apple Pay')">
+          <span>Apple Pay</span>
+        </button>
+        <button class="btn-wallet" onclick="executeAcceleratedCheckout('Google Pay')">
+          <span>Google Pay</span>
+        </button>
+      </div>
+
+      <button class="btn-primary" style="width:100%; justify-content:center; padding:13px;" onclick="executeAcceleratedCheckout('Standard')">
+        Accelerated Guest Checkout
+      </button>
+
+      <div style="text-align:center; margin-top:8px; font-size:0.68rem; color:var(--slate-muted); font-family:var(--font-mono); font-weight:700;">
+        256-BIT ENCRYPTED • SUB-10MS GATEWAY DISPATCH
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       17. MOBILE ERGONOMIC THUMB-ZONE BAR
+       ========================================================================== -->
+  <div class="mobile-sticky-action-bar">
+    <div>
+      <span class="mono-tag" style="color:var(--secondary);">ACTIVE DEPLOYMENT</span>
+      <div style="font-weight:700; font-size:1.2rem; color:var(--primary); font-family:var(--font-headline);" id="mobileThumbPrice">$2,850.00</div>
+    </div>
+    <div style="display:flex; gap:6px;">
+      <button class="btn-secondary" style="border-color:var(--primary); color:var(--primary); padding:8px 12px; font-size:0.75rem;" onclick="openPdpModal('cable-tower')">Specs</button>
+      <button class="btn-primary" style="padding:8px 14px; font-size:0.75rem;" onclick="toggleCartDrawer(true)">Cart</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       18. FOOTER (DEEP NAVY)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="brand-logo-wrap" style="margin-bottom:14px;">
+          <div class="brand-symbol" style="background:#ffffff; color:var(--primary);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 22 20 2 20 12 2"/></svg>
+          </div>
+          <span class="brand-title" style="color:#ffffff;">APEX ATHLETIC</span>
+        </div>
+        <p style="font-size:0.85rem; line-height:1.6; max-width:320px; color:#cbd5e1;">
+          Architected for elite human output and industrial strength engineering. Powered by bounded composability and biometric intelligence.
+        </p>
+      </div>
+      <div>
+        <h4 style="font-size:0.85rem; font-family:var(--font-headline); color:#ffffff; text-transform:uppercase; margin-bottom:12px; letter-spacing:0.04em;">Hardware & Rigs</h4>
+        <ul class="mega-menu-list" style="font-size:0.82rem;">
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="openPdpModal('cable-tower')">CT-1X2 Cable Tower</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="openPdpModal('cable-tower')">11-Gauge Power Cells</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="openPdpModal('cable-tower', 'room-planner')">10x10' Spatial Planner</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;">ASTM F2276 Certification</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:0.85rem; font-family:var(--font-headline); color:#ffffff; text-transform:uppercase; margin-bottom:12px; letter-spacing:0.04em;">Biometric Systems</h4>
+        <ul class="mega-menu-list" style="font-size:0.82rem;">
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="openPdpModal('compression-suit')">20-25 mmHg Compression</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="openPdpModal('carbon-shoe')">Strata Carbon FlyPlate</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="openAiSizingModal()">BoldMetrics Fit Advisor</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="scrollToSection('regen-section')">Apex Re-Gen Trade-In</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:0.85rem; font-family:var(--font-headline); color:#ffffff; text-transform:uppercase; margin-bottom:12px; letter-spacing:0.04em;">Enterprise & B2B</h4>
+        <ul class="mega-menu-list" style="font-size:0.82rem;">
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="switchCommerceMode('b2b')">Institutional Wholesale</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="toggleStrategyDrawer(true)">Research Blueprint Hub</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;" onclick="scrollToSection('bopis-section')">47-Min BOPIS Network</a></li>
+          <li><a href="javascript:void(0)" style="color:#cbd5e1;">Berry Amendment Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width:var(--container-max); margin:0 auto; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:#94a3b8; flex-wrap:wrap; gap:10px;">
+      <span>&copy; 2026 Apex Athletic Inc. All rights reserved. Commercial Sports E-Commerce Ecosystem.</span>
+      <span>Designed for sub-10ms UI latency and zero-bracket return waste.</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
